@@ -1,25 +1,24 @@
 import { useState } from "react";
 import { View } from "react-native";
 import styles from "./styles";
-import CustomSwitch from "./Switch";
+import DatePicker from "./DatePicker.android";
+import TimePicker from "./TimePicker.android";
 
-export default function TogglingOnAndOff() {
-  const [first, setFirst] = useState(false);
-  const [second, setSecond] = useState(false);
+export default function CollectinDateTimeInput() {
+  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState(new Date());
 
   return (
     <View style={styles.container}>
-      <CustomSwitch
-        label="Disable Next Switch"
-        value={first}
-        disabled={second}
-        onValueChange={setFirst}
+      <DatePicker
+        label="Pick a date, any date:"
+        value={date}
+        onChange={setDate}
       />
-      <CustomSwitch
-        label="Disable Previous Switch"
-        value={second}
-        disabled={first}
-        onValueChange={setSecond}
+      <TimePicker
+        label="Pick a time, any time:"
+        value={time}
+        onChange={setTime}
       />
     </View>
   );

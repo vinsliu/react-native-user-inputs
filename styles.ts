@@ -3,12 +3,16 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "ghostwhite",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "ghostwhite",
   },
-  customSwitch: {
-    alignItems: "center",
-    margin: 10,
+  datePickerContainer: {
+    width: 260,
+    margin: 20,
+  },
+  datePickerLabel: {
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
